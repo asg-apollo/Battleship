@@ -47,9 +47,14 @@ public class Grid
         grid[row][col] = setter;
     }
     
+    public int getSlot(int row, int col)
+    {
+        return grid[row][col];
+    }
+    
     public boolean isOccupied(int row, int col)
     {
-        if (grid[row][col] != 0)
+        if (grid[row][col] > 0 && grid[row][col] != 8)
         {
             return true;
         }

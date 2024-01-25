@@ -74,9 +74,11 @@ public class Battleship
         if (playerOcean.isOccupied(row, col))
         {
             compGuess.setSlot(row, col, 9);
+            playerOcean.setSlot(row, col, 9);
             checkForWin(1);
         } else
         {
+            playerOcean.setSlot(row,col,8);
             compGuess.setSlot(row, col, 8);
         }
     }
